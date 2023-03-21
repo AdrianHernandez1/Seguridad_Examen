@@ -1,0 +1,10 @@
+flask
+flask-sqlalchemy
+flask-security
+flask-validator
+mysqlclient
+flask-marshmallow
+bcrypt
+pytz
+Flask-WTF==1.1.1
+

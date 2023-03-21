@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-6" style="text-align: start;">
+    <a href="profile" class="btn btn-outline-info">Regresar</a>
+</div>
+<br>
+<div class="p-5 mb-4 bg-light shadow-lg" style="border-radius: 1rem;">
+  <div class="container-fluid ">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="fw-bold display-5 text-center text-dark"><b>Agregar nuevo producto</b></h1><br>
+          </div>
+      </div>
+      <form method="POST" action="/guardar">
+      <div class="row">
+        <div class="col-6">
+            <label class="text-black"><b>Nombre:</b></label>
+            <input class="form-control" type="text" name="nombre" placeholder="Ingresa el nombre">
+        </div>
+        <div class="col-6">
+            <label class="text-black"><b>Marca:</b></label>
+            <input class="form-control" type="text" name="marca" placeholder="Ingresa la marca">
+        </div>
+        <div class="col-12">
+            <label class="text-black"><b>Descripcción:</b></label>
+            <input class="form-control" type="text" name="descripccion" placeholder="Ingresa la escripcción">
+        </div>
+        <div class="col-6">
+            <label class="text-black"><b>Precio:</b></label>
+            <input class="form-control" type="text" name="precio" placeholder="Ingresa el precio">
+        </div>
+        <div class="col-6">
+            <label class="text-black"><b>Existencias:</b></label>
+            <input class="form-control" type="text" name="existencia" placeholder="Ingresa las existencias">
+        </div>
+        <div class="col-12">
+            <label class="text-black"><b>URL de la foto:</b></label>
+            <input class="form-control" type="text" name="foto" placeholder="Ingresa la URL de la foto"><br><br>
+        </div>
+        <div class="col-12" style="text-align: center;">
+            <button class="btn btn-outline-info">Guardar Producto</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h4 style="text-align: end;">
+  <b>Bienvenido, {{ name }}!</b>
+</h4><br>
+<div class="p-5 mb-4 bg-light shadow-lg" style="border-radius: 1rem;">
+  <div class="container-fluid ">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="fw-bold display-5 text-center text-dark"><b>Catálago de Teléfonos</b></h1><br>
+          </div>
+      </div>
+      <div class="row">
+        <table class="table table">
+          <thead>
+          <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Descripcción</th>
+              <th>Precio</th>
+              <th>Existencias</th>
+          </tr>
+      </thead>
+      <tbody>
+        {%for t in telefonos%}
+        <tr>
+            <td><img src="{{t.foto}}"></td>
+            <td>{{t.nombre}}</td>
+            <td>{{t.marca}}</td>
+            <td class="col-5" style="text-align: justify;">{{t.descripccion}}</td>
+            <td>$ {{t.precio}} MXM</td>
+            <td style="text-align: center;">{{t.existencias}}</td>
+        </tr>
+        {%endfor%}
+      </tbody>
+      </table>
+      </div>
+  </div>
+</div>
+{% endblock %}

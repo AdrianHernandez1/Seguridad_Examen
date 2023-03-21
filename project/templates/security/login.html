@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title"><b>INICIO DE SESIÓN</b></h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="notification is-danger">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="/security/login">
+            <div class="field">
+                <div class="control">
+                    <label class="text-black"><b><ion-icon name="person-outline"></ion-icon>Ingresa tu correo:</b></label>
+                    <input class="form-control" type="email" name="email" placeholder="Correo" autofocus="">
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <div class="control">
+                    <label class="text-black"><b>Ingresa tu contraseña:</b></label>
+                    <input class="form-control" type="password" name="password" placeholder="Contraseña">
+                </div>
+            </div>
+            <div class="field">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <b>Recuerdame</b>
+                </label>
+            </div>
+            <button class="btn btn-outline-info">Iniciar sesión</button>
+        </form>
+    </div>
+</div><br><br>
+{% endblock %}
